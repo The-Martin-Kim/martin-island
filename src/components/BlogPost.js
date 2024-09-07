@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/heading-has-content */
+
 import React, {useState, useEffect} from 'react';
 import {useParams} from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
