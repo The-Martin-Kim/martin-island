@@ -13,6 +13,17 @@
   }
 }
 
+@font-face {
+  font-family: 'GowunDodum-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunDodum-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.GowunDodum-Regular {
+  font-family: 'GowunDodum-Regular', sans-serif;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
