@@ -67,8 +67,8 @@ function BlogList() {
 
     return (
         <Container style={{ padding: '20px 0' }}>
-            <Typography variant="h4" component="h2" gutterBottom align="center" style={{ marginTop: '10px', marginBottom: '20px' }}>
-                INE.TODAY, 작지만 소중한 오늘.
+            <Typography variant="h4" component="h2" gutterBottom align="center" style={{ marginTop: '10px', marginBottom: '30px' }}>
+                작지만 소중한 오늘.
             </Typography>
             <Grid container spacing={4} justifyContent="center">
                 {currentPosts.map((post) => (
@@ -115,6 +115,7 @@ function BlogList() {
                         variant={index + 1 === currentPage ? 'contained' : 'outlined'}
                         onClick={() => handlePageChange(index + 1)}
                         style={{ margin: '0 5px' }}
+                        className="GowunDodum-Regular"
                     >
                         {index + 1}
                     </Button>

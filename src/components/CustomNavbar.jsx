@@ -16,14 +16,14 @@ function CustomNavbar() {
                             height={"30"}
                             className="d-inline-block align-top"
                         />
-                        <div style={{textAlign: 'center', marginLeft: "10px"}}>
-                            INE.TODAY
+                        <div className="GowunDodum-Regular" style={{textAlign: 'center', marginLeft: "10px"}}>
+                            <strong>INE.TODAY</strong>
                         </div>
                     </>
                 </Navbar.Brand>
                 <Nav className="justify-content-end" activeKey="/home">
                     <Nav.Item>
-                        <Nav.Link href="/">Home</Nav.Link>
+                        <Nav.Link href="/" className="GowunDodum-Regular">Home</Nav.Link>
                     </Nav.Item>
                 </Nav>
             </Container>
