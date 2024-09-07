@@ -91,6 +91,7 @@ function BlogList() {
                                     height="140"
                                     image={post.image || 'https://via.placeholder.com/350x140'}
                                     alt={post.title}
+                                    style={{ width: '350px', objectFit: 'cover' }}
                                 />
                                 <CardContent>
                                     <Typography gutterBottom variant="h5" component="div" align="center" style={{ fontWeight: 700 }}>
