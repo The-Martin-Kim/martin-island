@@ -66,7 +66,15 @@ function BlogPost() {
 
             <Divider style={{ marginBottom: '20px', marginTop: '10px' }} />
 
-            <ReactMarkdown>{content}</ReactMarkdown>
+            <ReactMarkdown
+                components={{
+                    img: ({node, ...props}) => (
+                        <img style={{maxWidth: '100%'}} {...props} alt="" />
+                    )
+                }}
+            >
+                {content}
+            </ReactMarkdown>
         </Container>
     );
 }
