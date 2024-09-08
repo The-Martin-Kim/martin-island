@@ -3,6 +3,8 @@
 import React, {useState, useEffect} from 'react';
 import {useParams} from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
+import rehypeRaw from 'rehype-raw';
+import gfm from 'remark-gfm';
 import {Container, Typography, Divider} from '@mui/material';
 
 const requireMarkdown = require.context('../posts', false, /\.md$/);
@@ -70,6 +72,8 @@ function BlogPost() {
 
 
             <ReactMarkdown
+                remarkPlugins={[gfm]}
+                rehypePlugins={[rehypeRaw]}
                 components={{
                     img: ({node, ...props}) => (
                         <img style={{maxWidth: '100%'}} {...props} alt=""/>
@@ -87,7 +91,7 @@ function BlogPost() {
                     blockquote: ({node, ...props}) => <blockquote
                         style={{fontFamily: 'GowunDodum-Regular, sans-serif'}} {...props} />,
                     code: ({node, ...props}) => <code
-                        style={{fontFamily: 'GowunDodum-Regular, sans-serif'}} {...props} />,
+                        style={{fontFamily: 'jetbrains-mono-regular, sans-serif'}} {...props} />,
                     pre: ({node, ...props}) => <pre
                         style={{fontFamily: 'GowunDodum-Regular, sans-serif'}} {...props} />,
                     strong: ({node, ...props}) => <strong

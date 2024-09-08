@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { Card, CardContent, Typography, Container, CardActionArea, CardMedia, Button, Box } from '@mui/material';
+import React, {useState, useEffect} from 'react';
+import {Card, CardContent, Typography, Container, CardActionArea, CardMedia, Button, Box} from '@mui/material';
 import Grid from '@mui/material/Grid2';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 const requireMarkdown = require.context('../posts', false, /\.md$/);
 
@@ -15,9 +15,9 @@ function parseFrontMatter(content) {
             metaData[key] = value;
         });
         const markdownContent = content.replace(match[0], '').trim();
-        return { metaData, markdownContent };
+        return {metaData, markdownContent};
     }
-    return { metaData: {}, markdownContent: content };
+    return {metaData: {}, markdownContent: content};
 }
 
 function formatDate(dateString) {
@@ -35,15 +35,15 @@ function BlogList() {
         const fetchPostInfo = async () => {
             const posts = requireMarkdown.keys().map((file) => {
                 const slug = file.replace('./', '').replace('.md', '');
-                return { title: slug.replace('-', ' '), slug, file };
+                return {title: slug.replace('-', ' '), slug, file};
             });
 
             const postDetails = await Promise.all(
                 posts.map(async (post) => {
                     const response = await fetch(requireMarkdown(post.file));
                     const text = await response.text();
-                    const { metaData } = parseFrontMatter(text);
-                    return { ...post, ...metaData };
+                    const {metaData} = parseFrontMatter(text);
+                    return {...post, ...metaData};
                 })
             );
 
@@ -66,8 +66,9 @@ function BlogList() {
     };
 
     return (
-        <Container style={{ padding: '20px 0' }}>
-            <Typography variant="h4" component="h2" gutterBottom align="center" style={{ marginTop: '10px', marginBottom: '30px' }}>
+        <Container style={{padding: '20px 0'}}>
+            <Typography variant="h4" component="h2" gutterBottom align="center"
+                        style={{marginTop: '10px', marginBottom: '30px'}}>
                 작지만 소중한 오늘.
             </Typography>
             <Grid container spacing={4} justifyContent="center">
@@ -91,10 +92,11 @@ function BlogList() {
                                     height="140"
                                     image={post.image || 'https://via.placeholder.com/350x140'}
                                     alt={post.title}
-                                    style={{ width: '350px', objectFit: 'cover' }}
+                                    style={{width: '350px', objectFit: 'cover'}}
                                 />
                                 <CardContent>
-                                    <Typography gutterBottom variant="h5" component="div" align="center" style={{ fontWeight: 700 }}>
+                                    <Typography gutterBottom variant="h5" component="div" align="center"
+                                                style={{fontWeight: 700}}>
                                         {post.title}
                                     </Typography>
 
@@ -109,12 +111,12 @@ function BlogList() {
             </Grid>
 
             <Box display="flex" justifyContent="center" marginTop={4}>
-                {Array.from({ length: totalPages }, (_, index) => (
+                {Array.from({length: totalPages}, (_, index) => (
                     <Button
                         key={index + 1}
                         variant={index + 1 === currentPage ? 'contained' : 'outlined'}
                         onClick={() => handlePageChange(index + 1)}
-                        style={{ margin: '0 5px' }}
+                        style={{margin: '0 5px'}}
                         className="GowunDodum-Regular"
                     >
                         {index + 1}
