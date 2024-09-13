@@ -18,7 +18,7 @@ function BlogList() {
         ? postInfo.filter((post) => post.category && post.category.includes(selectedCategory))
         : postInfo;
 
-    const postsPerPage = 6;
+    const postsPerPage = 9;
     const { currentData: currentPosts, totalPages, currentPage, handlePageChange } = usePagination(filteredPosts, postsPerPage);
 
     const handleCategoryClick = (category) => {
