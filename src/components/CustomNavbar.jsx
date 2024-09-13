@@ -4,7 +4,7 @@ import Nav from 'react-bootstrap/Nav';
 
 function CustomNavbar() {
     return (
-        <Navbar bg="light">
+        <Navbar bg="light" fixed="top">
             <Container>
                 <Navbar.Brand href="/"
                               style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
