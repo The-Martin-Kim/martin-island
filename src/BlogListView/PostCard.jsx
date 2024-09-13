@@ -1,8 +1,8 @@
 import React from 'react';
-import { Card, CardActionArea, CardContent, CardMedia, Typography } from '@mui/material';
-import { Link } from 'react-router-dom';
+import {Card, CardActionArea, CardContent, CardMedia, Typography} from '@mui/material';
+import {Link} from 'react-router-dom';
 
-const PostCard = ({ post }) => (
+const PostCard = ({post}) => (
     <Card
         sx={{
             transition: '0.3s',
@@ -18,17 +18,18 @@ const PostCard = ({ post }) => (
         <CardActionArea component={Link} to={`/post/${post.slug}`}>
             <CardMedia
                 component="img"
-                height="140"
                 image={post.image || 'https://via.placeholder.com/350x140'}
                 alt={post.title}
-                style={{ width: '350px', objectFit: 'cover' }}
+                style={{width: '100%', height: '140px', objectFit: 'cover'}}
             />
             <CardContent>
-                <Typography gutterBottom variant="h5" component="div" align="center" style={{ fontWeight: 700 }}>
+                <Typography gutterBottom variant="h5" component="div" align="center" style={{
+                    fontWeight: 700, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis'
+                }}>
                     {post.title}
                 </Typography>
                 <Typography variant="body2" color="text.secondary" align="center">
-                    Written by {post.author || 'INE.TODAY'} on {post.date || 'Unknown'}
+                    INE.TODAY on {post.date || 'Unknown'}
                 </Typography>
             </CardContent>
         </CardActionArea>
