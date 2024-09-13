@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import { Container, Typography, Box } from '@mui/material';
+import {Container, Typography, Box, CircularProgress} from '@mui/material';
 import CustomButtons from './CustomButtons';
 import ErrorPage from "../components/ErrorPage";
 import MarkdownRenderer from "./MarkdownRenderer";
@@ -11,6 +11,14 @@ import {useSinglePost} from "../hooks/useSinglePost";
 function BlogPost() {
     const { slug } = useParams();
     const { post, content, metaData } = useSinglePost(slug);
+
+    if (!post || !metaData || !content) {
+        return (
+            <Container style={{ marginTop: '20px', textAlign: 'center' }}>
+                <CircularProgress />
+            </Container>
+        );
+    }
 
     if (!post) return <ErrorPage />;
 
