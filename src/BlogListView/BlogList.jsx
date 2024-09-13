@@ -1,32 +1,29 @@
 import React, { useState } from 'react';
-import { Typography, Container, Grid} from '@mui/material';
-import ProfileCard from './ProfileCard';
-import {usePosts} from "../hooks/usePosts";
-import CategoryFilter from "./CategoryFilter";
-import PostCard from "./PostCard";
-import Pagination from "./Pagination";
+import { Typography, Container, Grid } from '@mui/material';
+import { usePosts } from '../hooks/usePosts';
+import Pagination from './Pagination';
+import { useMediaQuery, useTheme } from '@mui/material';
+import {usePagination} from "../hooks/usePagination";
+import ProfileSection from "./ProfileSection";
+import PostList from "./PostList";
 
 function BlogList() {
     const { postInfo, categories } = usePosts();
-    const [currentPage, setCurrentPage] = useState(1);
     const [selectedCategory, setSelectedCategory] = useState(null);
-    const postsPerPage = 6;
 
-    const indexOfLastPost = currentPage * postsPerPage;
-    const indexOfFirstPost = indexOfLastPost - postsPerPage;
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
     const filteredPosts = selectedCategory
         ? postInfo.filter((post) => post.category && post.category.includes(selectedCategory))
         : postInfo;
 
-    const currentPosts = filteredPosts.slice(indexOfFirstPost, indexOfLastPost);
-    const totalPages = Math.ceil(filteredPosts.length / postsPerPage);
-
-    const handlePageChange = (pageNumber) => setCurrentPage(pageNumber);
+    const postsPerPage = 6;
+    const { currentData: currentPosts, totalPages, currentPage, handlePageChange } = usePagination(filteredPosts, postsPerPage);
 
     const handleCategoryClick = (category) => {
         setSelectedCategory(selectedCategory === category ? null : category);
-        setCurrentPage(1);
+        handlePageChange(1);  // 카테고리가 변경될 때 첫 번째 페이지로 돌아가기
     };
 
     return (
@@ -42,24 +39,16 @@ function BlogList() {
             </Typography>
 
             <Grid container spacing={4}>
-                <Grid item xs={12} sm={3}>
-                    <ProfileCard />
-
-                    <CategoryFilter
+                {!isMobile && (
+                    <ProfileSection
                         categories={categories}
                         selectedCategory={selectedCategory}
                         handleCategoryClick={handleCategoryClick}
                     />
-                </Grid>
+                )}
 
                 <Grid item xs={12} sm={9}>
-                    <Grid container spacing={4}>
-                        {currentPosts.map((post) => (
-                            <Grid item xs={12} sm={6} md={4} key={post.slug}>
-                                <PostCard post={post} />
-                            </Grid>
-                        ))}
-                    </Grid>
+                    <PostList posts={currentPosts} />
 
                     <Pagination
                         totalPages={totalPages}
