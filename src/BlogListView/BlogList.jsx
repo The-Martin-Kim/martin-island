@@ -23,7 +23,7 @@ function BlogList() {
 
     const handleCategoryClick = (category) => {
         setSelectedCategory(selectedCategory === category ? null : category);
-        handlePageChange(1);  // 카테고리가 변경될 때 첫 번째 페이지로 돌아가기
+        handlePageChange(1);
     };
 
     return (
