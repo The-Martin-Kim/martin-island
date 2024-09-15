@@ -1,6 +1,7 @@
 import React from 'react';
-import {Card, CardActionArea, CardContent, CardMedia, Typography} from '@mui/material';
+import {Box, Card, CardActionArea, CardContent, CardMedia, Typography} from '@mui/material';
 import {Link} from 'react-router-dom';
+import PushPinIcon from '@mui/icons-material/PushPin';
 
 const PostCard = ({post}) => (
     <Card
@@ -22,7 +23,12 @@ const PostCard = ({post}) => (
                 alt={post.title}
                 style={{width: '100%', height: '140px', objectFit: 'cover'}}
             />
-            <CardContent>
+            <CardContent sx={{ position: 'relative' }}>
+                {post.id >= 999 && (
+                    <Box sx={{ position: 'absolute', top: '10px', right: '15px' }}>
+                        <PushPinIcon sx={{ color: 'rgba(0, 0, 0, 0.4)' }}/>
+                    </Box>
+                )}
                 <Typography gutterBottom variant="h5" component="div" align="center" style={{
                     fontWeight: 700, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis'
                 }}>
