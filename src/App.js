@@ -7,6 +7,7 @@ import CustomNavbar from "./components/CustomNavbar";
 import "./App.css"
 import CustomFooter from "./components/CustomFooter";
 import ErrorPage from "./components/ErrorPage";
+import ProfilePage from "./components/ProfilePage";
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
                 <Container style={{ flex: '1', paddingTop: '70px' }}>
                     <Routes>
                         <Route path="/" element={<BlogList />} />
+                        <Route path="/about" element={<ProfilePage />} />
                         <Route path="/post/:slug" element={<BlogPost />} />
                         <Route path="*" element={<ErrorPage />} />
                     </Routes>
