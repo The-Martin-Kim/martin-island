@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import { Typography, Container, Grid } from '@mui/material';
 import { usePosts } from '../hooks/usePosts';
 import Pagination from './Pagination';
@@ -6,6 +6,7 @@ import { useMediaQuery, useTheme } from '@mui/material';
 import {usePagination} from "../hooks/usePagination";
 import ProfileSection from "./ProfileSection";
 import PostList from "./PostList";
+import ReactGA from 'react-ga4';
 
 function BlogList() {
     const { postInfo, categories } = usePosts();
@@ -25,6 +26,10 @@ function BlogList() {
         setSelectedCategory(selectedCategory === category ? null : category);
         handlePageChange(1);
     };
+
+    useEffect(() => {
+        ReactGA.send({ hitType: 'pageview', page: '/' });
+    }, []);
 
     return (
         <Container style={{ padding: '20px 0' }}>

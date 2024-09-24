@@ -1,16 +1,23 @@
 /* eslint-disable jsx-a11y/heading-has-content */
 
-import React from 'react';
+import React, {useEffect} from 'react';
 import { useParams } from 'react-router-dom';
 import {Container, Typography, Box, CircularProgress} from '@mui/material';
 import CustomButtons from './CustomButtons';
 import ErrorPage from "../components/ErrorPage";
 import MarkdownRenderer from "./MarkdownRenderer";
 import {useSinglePost} from "../hooks/useSinglePost";
+import ReactGA from 'react-ga4';
 
 function BlogPost() {
     const { slug } = useParams();
     const { post, content, metaData } = useSinglePost(slug);
+
+    useEffect(() => {
+        if (slug) {
+            ReactGA.send({ hitType: 'pageview', page: `/post/${slug}`, title: metaData?.title || slug });
+        }
+    }, [slug, metaData]);
 
     if (!post || !metaData || !content) {
         return (
