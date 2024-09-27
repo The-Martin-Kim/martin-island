@@ -20,7 +20,7 @@ const markdownComponents = {
     ol: (props) => <ol style={commonStyle} {...props} />,
     li: (props) => <li style={commonStyle} {...props} />,
     blockquote: (props) => <blockquote style={commonStyle} {...props} />,
-    code: (props) => <code style={{ fontFamily: 'jetbrains-mono-regular, sans-serif' }} {...props} />,
+    code: (props) => <code style={{ fontFamily: 'jetbrains-mono-regular, sans-serif', fontSize: '1.1em' }} {...props} />,
     pre: (props) => <pre style={commonStyle} {...props} />,
     strong: (props) => <strong style={commonStyle} {...props} />,
     em: (props) => <em style={commonStyle} {...props} />,
