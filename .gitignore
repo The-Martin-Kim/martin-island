@@ -6,6 +6,11 @@
 .DS_Store
 .AppleDouble
 .LSOverride
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
 # Icon must end with two \r
 Icon
