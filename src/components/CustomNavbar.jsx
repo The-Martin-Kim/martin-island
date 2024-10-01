@@ -17,7 +17,7 @@ function CustomNavbar() {
                             className="d-inline-block align-top"
                         />
                         <div className="GowunDodum-Regular" style={{textAlign: 'center', marginLeft: "10px"}}>
-                            <strong>INE.TODAY</strong>
+                            <strong>개발하는 꼬망이</strong>
                         </div>
                     </>
                 </Navbar.Brand>
@@ -26,7 +26,7 @@ function CustomNavbar() {
                         <Nav.Link href="/" className="GowunDodum-Regular">Home</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                        <Nav.Link href="/about" className="GowunDodum-Regular">About_Me</Nav.Link>
+                        <Nav.Link href="/about" className="GowunDodum-Regular">Profile</Nav.Link>
                     </Nav.Item>
                 </Nav>
             </Container>

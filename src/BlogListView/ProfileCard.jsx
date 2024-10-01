@@ -9,17 +9,17 @@ const ProfileCard = () => {
         <Card sx={{ maxWidth: 345, marginBottom: 3, textAlign: 'center', padding: 2 }}>
             <Avatar
                 alt="Profile Image"
-                src="/profile.png"
+                src="/profile.jpeg"
                 sx={{ width: 150, height: 150, margin: '0 auto', marginBottom: 2 }}
             />
 
             <CardContent>
                 <Typography variant="h6" component="div">
-                    INE.TODAY
+                    Martin Kim
                 </Typography>
 
                 <Typography variant="body2" color="text.secondary" marginTop={1}>
-                    작지만 소중한 오늘,
+                    개발자 특: 이런 프사 씀
                 </Typography>
 
                 <Box display="flex" justifyContent="center" marginTop={2}>

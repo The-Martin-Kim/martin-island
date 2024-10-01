@@ -15,7 +15,7 @@ function ProfilePage() {
                         />
                         <Card.Body>
                             <Card.Title>Martin Kim</Card.Title>
-                            <Card.Subtitle className="mb-2 text-muted">INE.TODAY의 제작자이자 운영자</Card.Subtitle>
+                            <Card.Subtitle className="mb-2 text-muted">개발하는 꼬망이의 제작자이자 운영자</Card.Subtitle>
                             <br/>
                             <Card.Text as="div">
                                 <ul className="list-unstyled" style={{textAlign: 'left', paddingLeft: '20px'}}>
