@@ -35,7 +35,7 @@ const PostCard = ({post}) => (
                     {post.title}
                 </Typography>
                 <Typography variant="body2" color="text.secondary" align="center">
-                    INE.TODAY on {post.date || 'Unknown'}
+                    Martin Kim on {post.date || 'Unknown'}
                 </Typography>
             </CardContent>
         </CardActionArea>

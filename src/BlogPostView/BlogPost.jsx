@@ -36,7 +36,7 @@ function BlogPost() {
             </Typography>
 
             <Typography variant="body2" color="text.secondary">
-                Written by INE.TODAY on {metaData.date ? metaData.date : 'Unknown'}
+                Written by Martin Kim on {metaData.date ? metaData.date : 'Unknown'}
             </Typography>
 
             {Array.isArray(metaData.category) && metaData.category.length > 0 && (
