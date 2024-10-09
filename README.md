@@ -1,1 +1,1 @@
-# 작지만 소중한 오늘, [INE.TODAY](https://ine.today/)
+[이 곳을 클릭하세요.](https://mang-nae.com)
