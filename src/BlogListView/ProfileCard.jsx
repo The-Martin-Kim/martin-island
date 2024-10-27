@@ -6,10 +6,10 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 
 const ProfileCard = () => {
     return (
-        <Card sx={{ maxWidth: 345, marginBottom: 3, textAlign: 'center', padding: 2 }}>
+        <Card sx={{ maxWidth: 345, marginBottom: 2, textAlign: 'center', padding: 2 }}>
             <Avatar
                 alt="Profile Image"
-                src="/profile.jpeg"
+                src="/logo.png"
                 sx={{ width: 150, height: 150, margin: '0 auto', marginBottom: 2 }}
             />
 
@@ -19,7 +19,7 @@ const ProfileCard = () => {
                 </Typography>
 
                 <Typography variant="body2" color="text.secondary" marginTop={1}>
-                    개발자 특: 이런 프사 씀
+                    금융공학 AI 학·석사 과정 (인공지능/소프트웨어 전공). 프로그래밍/대입·영재원 면접/디지털새싹 강사로 활동하고 있습니다.
                 </Typography>
 
                 <Box display="flex" justifyContent="center" marginTop={2}>
