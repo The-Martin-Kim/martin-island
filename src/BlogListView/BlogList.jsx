@@ -1,12 +1,12 @@
-import React, {useEffect, useState} from 'react';
-import { Typography, Container, Grid } from '@mui/material';
+import React, {useState} from 'react';
+import { Container, Grid } from '@mui/material';
 import { usePosts } from '../hooks/usePosts';
 import Pagination from './Pagination';
 import { useMediaQuery, useTheme } from '@mui/material';
 import {usePagination} from "../hooks/usePagination";
 import ProfileSection from "./ProfileSection";
 import PostList from "./PostList";
-import ReactGA from 'react-ga4';
+import Clock from 'react-live-clock';
 
 function BlogList() {
     const { postInfo, categories } = usePosts();
@@ -27,21 +27,8 @@ function BlogList() {
         handlePageChange(1);
     };
 
-    useEffect(() => {
-        ReactGA.send({ hitType: 'pageview', page: '/' });
-    }, []);
-
     return (
         <Container style={{ padding: '20px 0' }}>
-            <Typography
-                variant="h4"
-                component="h2"
-                gutterBottom
-                align="center"
-                style={{ marginTop: '10px', marginBottom: '30px' }}
-            >
-                작지만 소중한 오늘.
-            </Typography>
 
             <Grid container spacing={4}>
                 {!isMobile && (
@@ -53,7 +40,7 @@ function BlogList() {
                 )}
 
                 <Grid item xs={12} sm={9}>
-                    <PostList posts={currentPosts} />
+                    <PostList posts={currentPosts}/>
 
                     <Pagination
                         totalPages={totalPages}
