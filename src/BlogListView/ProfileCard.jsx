@@ -19,7 +19,7 @@ const ProfileCard = () => {
                 </Typography>
 
                 <Typography variant="body2" color="text.secondary" marginTop={1}>
-                    금융공학 AI 학·석사 과정 (인공지능/소프트웨어 전공). 프로그래밍/대입·영재원 면접/디지털새싹 강사로 활동하고 있습니다.
+                    Finance AI 분야의 석사 과정을 이수 중에 있습니다.(본 전공 - 인공지능/소프트웨어). 프로그래밍/IT 대회/대입·영재원 면접/디지털새싹 소속 강사로 활동하고 있습니다.
                 </Typography>
 
                 <Box display="flex" justifyContent="center" marginTop={2}>
