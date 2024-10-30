@@ -24,6 +24,9 @@ function ProfilePage() {
             <Col md={8} xs={12}>
                 <Card style={{width: '100%', border: 'none'}}>
                     <Card.Body>Captain of Martin Island, The Educational System for AI·SW</Card.Body>
+                    <Card.Body>학부 학술지원 장학생(2023.09 ~ 2024.07)</Card.Body>
+                    <Card.Body>학부생 연구형 인턴쉽 장학생(2024학년도 1학기, 2학기)</Card.Body>
+                    <Card.Body>성적 우수 및 SW 중심대학 장학생</Card.Body>
                     <Card.Body>자율형 사립고등학교인 모교에서의 대회 수상(창의력 대회, SW 공모대회, SW 교육
                         컨텐츠 대회 등) 이력과 학생부 종합전형 대비 중심의 학교 생활 경험을 바탕으로 현재까지도
                         많은 중·고등학생의 교내/외 대회 및 수행평가 관련 지도 활동을 하고 있습니다.</Card.Body>
