@@ -23,6 +23,8 @@ function ProfilePage() {
         <Row className="mt-2 justify-content-center">
             <Col md={8} xs={12}>
                 <Card style={{width: '100%', border: 'none'}}>
+                    <Card.Body> 손○○ 학생의 포스텍 영재기업인교육원 합격을 축하합니다 !</Card.Body>
+                    <Card.Body> 이지스퍼블리싱의 『 Do it! 자바 프로그래밍 입문 』 베타 리더로 선정되었습니다 ! </Card.Body>
                     <Card.Body>Captain of Martin Island, The Educational System for AI·SW</Card.Body>
                     <Card.Body>학부 학술지원 장학생(2023.09 ~ 2024.07)</Card.Body>
                     <Card.Body>학부생 연구형 인턴쉽 장학생(2024학년도 1학기, 2학기)</Card.Body>
@@ -46,7 +48,8 @@ function ProfilePage() {
                         진행하고 있습니다.</Card.Body>
                     <Card.Body>2023년 주요 실적 (대입): 서울대 지역균형전형 최초합, 한양대(서울) 소프트웨어인재 전형
                         최초합, 국민대 SW 특기자 전형 최초합, 가천대 조기취업형 계약학과 전형 최초합</Card.Body>
-                    <Card.Body>2024년 주요 실적 (대회 지도 후 수상): 교내 발명품대회, 제3회 국제청소년 한국유네스코유산
+                    <Card.Body>2024년 주요 실적 (대입 및 입시): 포스텍 영재기업인교육원</Card.Body>
+                    <Card.Body>2024년 주요 실적 (대회 지도 및 수상): 교내 발명품대회, 제3회 국제청소년 한국유네스코유산
                         알리기 아이디어대회(SW첨단기술부문), Korea-International Youth Olympiad 2024</Card.Body>
                 </Card>
             </Col>
