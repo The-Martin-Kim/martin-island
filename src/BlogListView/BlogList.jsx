@@ -6,7 +6,6 @@ import { useMediaQuery, useTheme } from '@mui/material';
 import {usePagination} from "../hooks/usePagination";
 import ProfileSection from "./ProfileSection";
 import PostList from "./PostList";
-import Clock from 'react-live-clock';
 
 function BlogList() {
     const { postInfo, categories } = usePosts();
