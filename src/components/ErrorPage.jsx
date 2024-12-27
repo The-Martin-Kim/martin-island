@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Container, Typography, Box } from '@mui/material';
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 function ErrorPage() {
     const navigate = useNavigate();
@@ -22,16 +23,21 @@ function ErrorPage() {
     }, [navigate]);
 
     return (
-        <Container style={{ textAlign: 'center', marginTop: '60px' }}>
+        <Container style={{ textAlign: 'center', marginTop: '30px', marginBottom: '30px' }}>
             <Box>
-                <Typography variant="h4" component="h1" gutterBottom>
+                <DotLottieReact
+                    src="https://lottie.host/3d5e3c28-e292-4519-991f-58453e9b5534/fBeplJ3o2P.lottie"
+                    loop
+                    autoplay
+                />
+                <Typography variant="h4" component="h2" gutterBottom>
                     404 Not Found
                 </Typography>
                 <Typography variant="body1">
-                    페이지를 찾을 수 없습니다.
+                    상어가 페이지를 먹어버렸나봐요.
                 </Typography>
                 <Typography variant="body1" color="error" style={{ marginTop: '20px' }}>
-                    {seconds}초 후에 메인 페이지로 자동 새로고침됩니다.
+                    {seconds}초 후에 구조대가 도착합니다.
                 </Typography>
             </Box>
         </Container>

@@ -15,7 +15,7 @@ function BlogPost() {
     if (!post || !metaData || !content) {
         return (
             <Container style={{ marginTop: '20px', textAlign: 'center' }}>
-                <CircularProgress />
+                <ErrorPage/>
             </Container>
         );
     }
