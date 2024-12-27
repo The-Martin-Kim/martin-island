@@ -21,7 +21,7 @@ function CustomNavbar() {
                               className="ms-auto">
                     <div style={{display: 'flex', alignItems: 'center'}}>
                         <div className="GowunDodum-Regular" style={{textAlign: 'center', marginLeft: "10px"}}>
-                            <strong>Martin-Island.com</strong>
+                            <strong>martin-island.com</strong>
                         </div>
                     </div>
                 </Navbar.Brand>
