@@ -8,7 +8,7 @@ import "./App.css"
 import CustomFooter from "./components/CustomFooter";
 import ErrorPage from "./components/ErrorPage";
 import ProfilePage from "./components/ProfilePage";
-import LecturePage from "./Lectures/LecturePage";
+// import LecturePage from "./Lectures/LecturePage";
 
 function App() {
     return (
@@ -21,7 +21,7 @@ function App() {
                     <Routes>
                         <Route path="/" element={<BlogList/>}/>
                         <Route path="/about" element={<ProfilePage/>}/>
-                        <Route path="/lecture" element={<LecturePage/>}/>
+                        {/*<Route path="/lecture" element={<LecturePage/>}/>*/}
                         <Route path="/post/:slug" element={<BlogPost/>}/>
                         <Route path="*" element={<ErrorPage/>}/>
                     </Routes>

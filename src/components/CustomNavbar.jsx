@@ -13,9 +13,9 @@ function CustomNavbar() {
                     <Nav.Item>
                         <Nav.Link href="/about" className="GowunDodum-Regular">Profile</Nav.Link>
                     </Nav.Item>
-                    <Nav.Item>
-                        <Nav.Link href="/lecture" className="GowunDodum-Regular">Q-bank</Nav.Link>
-                    </Nav.Item>
+                    {/*<Nav.Item>*/}
+                    {/*    <Nav.Link href="/lecture" className="GowunDodum-Regular">Q-bank</Nav.Link>*/}
+                    {/*</Nav.Item>*/}
                 </Nav>
                 <Navbar.Brand href="/"
                               className="ms-auto">
