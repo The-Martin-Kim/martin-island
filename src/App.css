@@ -55,3 +55,16 @@
         transform: rotate(360deg);
     }
 }
+
+.accordion-button:focus,
+.accordion-button:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #e7f1ff !important;
+    color: inherit !important;
+    box-shadow: none !important;
+}
+
