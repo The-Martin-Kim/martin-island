@@ -24,7 +24,7 @@ const PostCard = ({post}) => (
                 style={{width: '100%', height: '140px', objectFit: 'cover'}}
             />
             <CardContent sx={{ position: 'relative' }}>
-                {post.id >= 999 && (
+                {post.id >= 10000 && (
                     <Box sx={{ position: 'absolute', top: '10px', right: '15px' }}>
                         <PushPinIcon sx={{ color: 'rgba(0, 0, 0, 0.4)' }}/>
                     </Box>
