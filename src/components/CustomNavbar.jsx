@@ -11,6 +11,15 @@ function CustomNavbar() {
                         <Nav.Link href="/" className="GowunDodum-Regular">Home</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
+                        <Nav.Link href="/lecture" className="GowunDodum-Regular">Lecture</Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item>
+                        <Nav.Link href="/baekjoon" className="GowunDodum-Regular">Baekjoon</Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item>
+                        <Nav.Link href="/usaco" className="GowunDodum-Regular">USACO</Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item>
                         <Nav.Link href="/about" className="GowunDodum-Regular">Profile</Nav.Link>
                     </Nav.Item>
                     {/*<Nav.Item>*/}

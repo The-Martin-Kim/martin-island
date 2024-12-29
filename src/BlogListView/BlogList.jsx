@@ -7,19 +7,26 @@ import {usePagination} from "../hooks/usePagination";
 import ProfileSection from "./ProfileSection";
 import PostList from "./PostList";
 
-function BlogList() {
+function BlogList({ defaultFilterFn = (post) => true }) {
     const { postInfo, categories } = usePosts();
     const [selectedCategory, setSelectedCategory] = useState(null);
 
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
+    const baseFiltered = postInfo.filter(defaultFilterFn);
+
     const filteredPosts = selectedCategory
-        ? postInfo.filter((post) => post.category && post.category.includes(selectedCategory))
-        : postInfo;
+        ? baseFiltered.filter((post) => post.category && post.category.includes(selectedCategory))
+        : baseFiltered;
 
     const postsPerPage = 9;
-    const { currentData: currentPosts, totalPages, currentPage, handlePageChange } = usePagination(filteredPosts, postsPerPage);
+    const {
+        currentData: currentPosts,
+        totalPages,
+        currentPage,
+        handlePageChange
+    } = usePagination(filteredPosts, postsPerPage);
 
     const handleCategoryClick = (category) => {
         setSelectedCategory(selectedCategory === category ? null : category);

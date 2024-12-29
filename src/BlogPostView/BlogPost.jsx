@@ -20,8 +20,6 @@ function BlogPost() {
         );
     }
 
-    if (!post) return <ErrorPage />;
-
     return (
         <Container style={{ marginBottom: '30px' }}>
             <Typography variant="h4" component="h2" gutterBottom>
