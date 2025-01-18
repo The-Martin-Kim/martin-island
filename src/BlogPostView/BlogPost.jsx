@@ -10,7 +10,15 @@ import {useSinglePost} from "../hooks/useSinglePost";
 
 function BlogPost() {
     const { slug } = useParams();
-    const { post, content, metaData } = useSinglePost(slug);
+    const { post, content, metaData, isLoading} = useSinglePost(slug);
+
+    if (isLoading) {
+        return (
+            <Container style={{ marginTop: '20px', textAlign: 'center' }}>
+                <CircularProgress />
+            </Container>
+        );
+    }
 
     if (!post || !metaData || !content) {
         return (
