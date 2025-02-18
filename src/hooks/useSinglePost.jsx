@@ -4,8 +4,8 @@ import { parseFrontMatter } from '../components/parseFrontMatter';
 const requireMarkdown = require.context('../posts', false, /\.md$/);
 
 export const useSinglePost = (slug) => {
-    const [content, setContent] = useState('');
-    const [metaData, setMetaData] = useState({});
+    const [content, setContent] = useState(null);
+    const [metaData, setMetaData] = useState(null);
     const [post, setPost] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
 

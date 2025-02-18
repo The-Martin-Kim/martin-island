@@ -20,7 +20,7 @@ function BlogPost() {
         );
     }
 
-    if (!post || !metaData || !content) {
+    if (!post || metaData === null || content === null) {
         return (
             <Container style={{ marginTop: '20px', textAlign: 'center' }}>
                 <ErrorPage/>
